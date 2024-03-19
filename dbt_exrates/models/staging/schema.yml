@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+  - name: exrates
+    schema: "{{ var('src_schema', 'public') }}"
+    tables:
+      - name: exrates
+        description: "Exchange rates as they are loaded"
+        columns:
+          - name: country
+            description: "The id of the activity instance"
+            tests:
+            - not_null
+          - name: currency
+            description: "Currency"
+            tests:
+            - not_null
+          - name: start_date
+            description: "start_date"
+            tests:
+            - not_null
+          - name: end_date
+            description: "end_date"
+            tests:
+            - not_null
+          - name: currency_code
+            description: "currency_code"
+            tests:
+            - not_null
+          - name: currency_units_per_1
+            description: "currency_units_per_1"
+            tests:
+            - not_null
+          - name: _airbyte_meta
+            description: "Airbyte reserved field"
+            tests:
+            - airbyte_errors
+          - name: _ab_source_file_url
+            description: "Airbyte file name imported"
+            tests:
+            - airbyte_import_count

@@ -1,0 +1,1 @@
+{   "country": "string", "currency": "string", "currency_code": "string", "currency_units_per_1": "number", "start_date": "string", "end_date": "string" }
