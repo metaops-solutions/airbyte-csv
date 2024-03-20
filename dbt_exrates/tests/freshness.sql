@@ -1,0 +1,1 @@
+select * from {{ ref('current_exrates') }} where start_date < CURRENT_DATE - INTERVAL '2 months'
